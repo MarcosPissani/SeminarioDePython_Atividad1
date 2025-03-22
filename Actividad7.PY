@@ -14,7 +14,7 @@ puntos = 0
 3. 
 # El usuario deberá contestar 3 preguntas
  # Se selecciona tres pregunta aleatoria
-questions_to_ask = random.choices(list(zip(questions,answers, correct_answers_index)), k=3)
+questions_to_ask = random.sample(list(zip(questions,answers, correct_answers_index)), k=3)
  # Se muestra la pregunta y las respuestas posibles
 for question,answer,correct_answers in questions_to_ask:
      if(valido):
@@ -40,7 +40,7 @@ for question,answer,correct_answers in questions_to_ask:
                      puntos -= 0.5
  # Si el usuario no responde correctamente después de 2 intentos,
  # se muestra la respuesta correcta 
-             print("Incorrecto. La respuesta correcta es:")
+             print("Incorrecto. La respuesta correcta es la opcion :")
              print(correct_answers)
  # Se imprime un blanco al final de la pregunta
      numero_de_preguntas += 1
