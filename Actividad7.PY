@@ -6,6 +6,7 @@ answers = [("size()", "len()", "length()", "count()"),("3.14", "'42'", "10", "Tr
 correct_answers_index = [1, 2, 0, 3, 1]
 numero_de_preguntas = 1
 valido = True
+puntos = 0
 6. 
 7. 
 1. 
@@ -31,12 +32,15 @@ while ( numero_de_preguntas <= 3) and valido :
          else:
              if (user_answer == correct_answers_index[question_index]):
                  print("¡Correcto!")
+                 puntos += 1
                  break
              else:
                  print("respuesta no valida")
+                 puntos -= 0.5
  # Si el usuario no responde correctamente después de 2 intentos,
  # se muestra la respuesta correcta 
          print("Incorrecto. La respuesta correcta es:")
          print(answers[question_index],[correct_answers_index[question_index]])
  # Se imprime un blanco al final de la pregunta
      numero_de_preguntas += 1
+print("la cantidad de puntos obtenidos en el juego es de  : ", puntos)
